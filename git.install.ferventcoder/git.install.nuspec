@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>git.install.ferventcoder</id>
+    <title>Git (Install) + FerventCoder prefs</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Rob Reynolds</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>Git + Rob's Preferences</summary>
+    <description>Git installs and then Rob's preferences are applied :)
+    </description>
+    <projectUrl>http://msysgit.github.com/</projectUrl>
+    <tags>git vcs dvcs version control msysgit admin FerventCoder</tags>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/ferventcoder/chocolateyautomaticpackages/raw/master/git/git.png</iconUrl>
+  </metadata>
+</package>
