@@ -1,21 +1,23 @@
-#Install-ChocolateyPackage 'dropbox' 'exe' '/S' 'https://www.dropbox.com/download?plat=win' # -validExitCodes @(0)
+﻿$packageName = "dropbox"
+$filePath = "$env:TEMP\chocolatey\$packageName"
+$fileFullPath = "$filePath\$packageName`Install.exe"
+$url = "https://www.dropbox.com/download?plat=win"
+$fileType = "exe"
+$silentArgs = "/S"
+
 try {
-  #based on http://wpkg.org/Dropbox
-  $scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-  $installerFile = Join-Path $scriptDir 'dropbox.au3'
 
-  $tempDir = "$env:TEMP\chocolatey\dropbox"
-  if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-  $file = Join-Path $tempDir "dropboxInstall.exe"
-  Get-ChocolateyWebFile 'dropbox' "$file" 'https://www.dropbox.com/download?plat=win'
-  
-  write-host "Installing `'$file`' with AutoIt3 using `'$installerFile`'"
-  $installArgs = "/c autoit3 `"$installerFile`" `"$file`""
-  Start-ChocolateyProcessAsAdmin "$installArgs" 'cmd.exe'
-  #Start-Process "autoit3" -ArgumentList "$installerFile `"$file`"" -Wait
+    if (-not (Test-Path $filePath)) {
+    New-Item $filePath -type directory
+    }
 
-  Write-ChocolateySuccess 'dropbox'
+	Get-ChocolateyWebFile $packageName $fileFullPath $url
+    Start-Process $fileFullPath -ArgumentList $silentArgs
+	Wait-Process -Name "dropboxInstall"
+    Remove-Item $fileFullPath
+	
+    Write-ChocolateySuccess $packageName
 } catch {
-  Write-ChocolateyFailure 'dropbox' "$($_.Exception.Message)"
+  Write-ChocolateyFailure $packageName "$($_.Exception.Message)"
   throw 
 }
