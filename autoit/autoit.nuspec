@@ -1,9 +1,10 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autoit</id>
     <title>AutoIT</title>
-    <version>{{PackageVersion}}</version>
+    <!--<version>{{PackageVersion}}</version>-->
+	<version>3.3.8.2</version>
     <authors>Jonathan Bennett, AutoIt Team</authors>
     <owners>Rob Reynolds</owners>
     <summary>AutoIT - Automation and scripting language</summary>
@@ -12,6 +13,6 @@
     <tags>autoit install automation chocolatey admin</tags>
     <licenseUrl>http://www.autoitscript.com/autoit3/docs/license.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/ferventcoder/chocolateyautomaticpackages/raw/master/autoit/autoit.png</iconUrl>
+    <iconUrl>https://raw.github.com/ferventcoder/chocolateyautomaticpackages/master/autoit/autoit.png</iconUrl>
   </metadata>
 </package>
