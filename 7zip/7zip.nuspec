@@ -3,7 +3,8 @@
   <metadata>
     <id>7zip</id>
     <title>7Zip</title>
-    <version>{{PackageVersion}}</version>
+    <!--<version>{{PackageVersion}}</version>-->
+	<version>9.22.01.20130615</version>
     <authors>Igor Pavlov</authors>
     <owners>Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
