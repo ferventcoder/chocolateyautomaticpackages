@@ -8,7 +8,7 @@ try {
 	Import-Module "$($pwd)\Get-FilenameFromRegex.ps1"
 	# Why does an import failure on this module not throw an error?
 
-	$url1 = Get-FilenameFromRegex "http://www.filehippo.com/download_paint.net/history/" 'download_paint.net/([\d]+)/">Paint.NET {{PackageVersion}}<' 'http://www.filehippo.com/download_paint.net/$1/'
+	$url1 = Get-FilenameFromRegex "http://www.filehippo.com/download_paint.net/history/" 'download_paint.net/([\d]+)/">Paint.NET 3.5.10<' 'http://www.filehippo.com/download_paint.net/$1/'
 	
     Write-Host "Found URL which contains the download URL 1: $url1"
 
