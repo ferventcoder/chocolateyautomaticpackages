@@ -1,4 +1,5 @@
 try {
+  $packageName = '{{PackageName}}'
   #http://www.enterprisedb.com/products-services-training/pgdownload#windows
   #http://www.enterprisedb.com/resources-community/pginst-guide
   
@@ -54,14 +55,14 @@ try {
 #  $installArgs = "--mode unattended --prefix $postgrePath --datadir $($postgrePath)\data --superpassword $postgrePassword"
   $installArgs = "--mode unattended --prefix $postgrePath --datadir $($postgrePath)\data --servicename PostgreSQL --superaccount $postgreAccount --superpassword $postgrePassword --serviceaccount $postgreAccount"
 
-  Install-ChocolateyPackage 'postgresql' 'exe' "$installArgs" '{{DownloadUrl}}' 
+  Install-ChocolateyPackage $packageName 'exe' "$installArgs" '{{DownloadUrl}}' 
 #'http://get.enterprisedb.com/postgresql/postgresql-9.1.1-1-windows-x64.exe' 
 
   #Add path
   Install-ChocolateyPath "$($postgrePath)\bin"
   
-  Write-ChocolateySuccess 'postgresql'
+  Write-ChocolateySuccess $packageName
 } catch {
-  Write-ChocolateyFailure 'postgresql' "$($_.Exception.Message)"
+  Write-ChocolateyFailure $packageName "$($_.Exception.Message)"
   throw 
 }
