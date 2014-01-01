@@ -37,7 +37,9 @@ try {
   $file = Join-Path $tempDir "$($packageName).zip"
   Get-ChocolateyWebFile "$packageName" "$file" "$url" "$url64"
 
-  Start-Process "7za" -ArgumentList "x -o`"$installDir`" -y `"$file`" -xr!docs -xr!mysql-test -xr!sql-bench -xr!supportfiles" -Wait
+  $zipDir = (dir $env:ChocolateyInstall\lib\7zip.commandline*)
+  if($zipDir.length -gt 0) {$zipDir = $zipDir[-1]}
+  &"$zipDir\tools\7za.exe" x -o$installDir -y "$file" -xr!docs -xr!mysql-test -xr!sql-bench -xr!supportfiles
 
   #find this directory
   $installedContentsDir = get-childitem $installDir -include 'mysql*' | Sort-Object -Property LastWriteTime -Desc | select -First 1
