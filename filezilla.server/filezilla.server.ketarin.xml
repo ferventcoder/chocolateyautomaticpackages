@@ -78,7 +78,7 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T03:39:28.3341549</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://hivelocity.dl.sourceforge.net/project/filezilla/FileZilla%20Server/{version}/FileZilla_Server-{versionUnderscore}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.filezilla-project.org/FileZilla_Server-{versionUnderscore}.exe</FixedDownloadUrl>
     <Name>filezilla.server</Name>
   </ApplicationJob>
 </Jobs>
