@@ -13,16 +13,18 @@ try {
   Start-sleep 8
 
   if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-  if (![System.IO.Directory]::Exists($fileZillaInstallDir)) {[System.IO.Directory]::CreateDirectory($fileZillaInstallDir)}
+  if (![System.IO.Directory]::Exists($fileZillaInstallDir)) {
+    Start-ChocolateyProcessAsAdmin "[System.IO.Directory]::CreateDirectory('$fileZillaInstallDir')" -validExitCodes @(0,-1073741510)
+  }
   
   if (![System.IO.File]::Exists("$($fileZillaInstallDir)\FileZilla Server Interface.xml")) {
     Write-Host "Copying FileZilla Server Interface.xml to install directory"
-    Copy-Item "$($toolsDir)\FileZilla Server Interface.xml" "$fileZillaInstallDir" -Force
+    Start-ChocolateyProcessAsAdmin "Copy-Item '$($toolsDir)\FileZilla Server Interface.xml' '$fileZillaInstallDir' -Force"
   }
   
   if (![System.IO.File]::Exists("$($fileZillaInstallDir)\FileZilla Server.xml")) {
     Write-Host "Copying FileZilla Server.xml to install directory"
-    Copy-Item "$($toolsDir)\FileZilla Server.xml" "$fileZillaInstallDir" -Force
+    Start-ChocolateyProcessAsAdmin "Copy-Item '$($toolsDir)\FileZilla Server.xml' '$fileZillaInstallDir' -Force"
   }
 
   Install-ChocolateyPackage 'filezilla.server' 'exe' '/S' 'http://download.filezilla-project.org/FileZilla_Server-{{PackageVersion}}.exe'
