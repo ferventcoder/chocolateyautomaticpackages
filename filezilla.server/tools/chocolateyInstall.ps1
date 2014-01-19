@@ -27,7 +27,7 @@ try {
     Start-ChocolateyProcessAsAdmin "Copy-Item '$($toolsDir)\FileZilla Server.xml' '$fileZillaInstallDir' -Force"
   }
 
-  Install-ChocolateyPackage 'filezilla.server' 'exe' '/S' 'http://download.filezilla-project.org/FileZilla_Server-{{PackageVersion}}.exe'
+  Install-ChocolateyPackage 'filezilla.server' 'exe' '/S' 'http://downloads.sourceforge.net/filezilla/FileZilla_Server-{{PackageVersion}}.exe'
   
   Write-ChocolateySuccess 'filezilla.server'
 } catch {
