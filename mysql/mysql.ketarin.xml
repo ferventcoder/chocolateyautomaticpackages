@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>37258752</LastFileSize>
-    <LastFileDate>2013-06-04T05:40:58.4619381</LastFileDate>
+    <LastFileSize>255557632</LastFileSize>
+    <LastFileDate>2014-05-16T20:51:04+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -55,13 +55,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\mysql-5.6.12-win32.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mysql-installer-community-5.6.19.0.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-04T05:40:58.4619381</LastUpdated>
+    <LastUpdated>2014-06-04T20:31:28.3967493+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.mysql.com/get/Downloads/MySQL-5.6/mysql-{version}-win32.msi/from/http://mysql.he.net/</FixedDownloadUrl>
+    <FixedDownloadUrl>http://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-{version}.0.msi</FixedDownloadUrl>
     <Name>mysql</Name>
   </ApplicationJob>
 </Jobs>
