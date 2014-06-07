@@ -1,5 +1,15 @@
 try {
-  Install-ChocolateyPackage 'git.install' 'exe' '/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /NOICONS  /COMPONENTS="assoc,assoc_sh" /LOG' '{{DownloadUrl}}'
+  $silentArgs = '/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /NOICONS /COMPONENTS="assoc,assoc_sh" /LOG'
+
+  $key = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Git_is1'
+  #adjust for 64-bit Windows (explicitly read from 32-bit reg)
+  if (-not (Test-Path $key)) { $key = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Git_is1' }
+  if (Test-Path $key) {
+    $path = (Get-ItemProperty -Path $key -Name 'InstallLocation').InstallLocation
+    $silentArgs += ' /DIR=' + "`"$path`""
+  }
+  
+  Install-ChocolateyPackage 'git.install' 'exe' $silentArgs '{{DownloadUrl}}'
 
   #------- ADDITIONAL SETUP -------#
   $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
