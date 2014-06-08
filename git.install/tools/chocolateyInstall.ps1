@@ -9,7 +9,7 @@ try {
     $silentArgs += ' /DIR=' + "`"$path`""
   }
   
-  Install-ChocolateyPackage 'git.install' 'exe' $silentArgs '{{DownloadUrl}}'
+  Install-ChocolateyPackage 'git.install' 'exe' "$silentArgs" '{{DownloadUrl}}'
 
   #------- ADDITIONAL SETUP -------#
   $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
