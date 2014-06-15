@@ -44,7 +44,7 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://get.adobe.com/reader/</Url>
-            <StartText>&lt;p&gt;&lt;a href="/reader/completion/?installer=Reader_</StartText>
+            <StartText>&lt;p class="NoBottomMargin" id="AUTO_ID_columnleft_p_version"&gt;&lt;strong&gt;Version XI (</StartText>
             <EndText>.</EndText>
             <Name>mainversion</Name>
           </UrlVariable>
