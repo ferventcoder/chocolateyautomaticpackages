@@ -5,7 +5,7 @@
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>3739157</LastFileSize>
-    <LastFileDate>2013-08-17T22:02:31+02:00</LastFileDate>
+    <LastFileDate>2014-06-25T14:52:06+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -54,11 +54,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Paint.NET.3.5.11.Install.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Paint.NET.4.0.Install.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-01-05T01:13:39.1706408+01:00</LastUpdated>
+    <LastUpdated>2014-06-27T14:36:58+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.dotpdn.com/files/Paint.NET.{version}.Install.zip</FixedDownloadUrl>
     <Name>paint.net</Name>
