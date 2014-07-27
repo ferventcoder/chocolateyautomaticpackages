@@ -1,1 +1,0 @@
-gci C:\code\mine\chocolateyautomaticpackages -exclude removefiles.ps1 -include *.nuspec,*.ps1 -Recurse -Force | Remove-Item -Recurse -Force
