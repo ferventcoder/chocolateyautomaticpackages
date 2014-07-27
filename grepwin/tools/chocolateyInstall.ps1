@@ -1,1 +1,0 @@
-Install-ChocolateyPackage 'grepwin' 'msi' '/quiet' '{{DownloadUrl}}' '{{DownloadUrlx64}}' 
