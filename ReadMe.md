@@ -1,5 +1,8 @@
 Chocolatey Automatic Packages
-=============================================  
+=============================================
+
+## NOTE: This repository has been deprecated to https://github.com/ferventcoder/chocolatey-packages
+
 ### Templated packages used in an automated update scenario
 ##INFO
 These are packages that do not yet have a home elsewhere.
